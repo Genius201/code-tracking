@@ -1,0 +1,51 @@
+.venue-details {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  color: white;
+}
+
+.venue-details.loading,
+.venue-details.error,
+.venue-details.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.error-message,
+.not-found-message {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 500px;
+}
+
+.error-message h2,
+.not-found-message h2 {
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+.error-message button,
+.not-found-message button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.error-message button:hover,
+... (truncated for brevity)
