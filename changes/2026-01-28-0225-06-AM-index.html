@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App (Flask)</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 40px; }
+        .timer { font-size: 3rem; margin: 20px; }
+        .flash { color: red; animation: flash 0.5s alternate infinite; }
+        @keyframes flash { from { color: red; } to { color: black; } }
+    </style>
+</head>
+<body>
+    <h1>Counter App (Flask)</h1>
+    <div>
+        <button onclick="showMode('countdown')">Countdown Mode</button>
+        <button onclick="showMode('record')">Record Mode</button>
+    </div>
+    <div id="countdown" style="display:block;">
+        <label>Set Minutes: <input type="number" id="inputMinutes" min="1" value="1"></label>
+        <button onclick="startTimer()" id="startBtn">Start</button>
+        <button onclick="resetTimer()">Reset</button>
+        <div id="timerDisplay" class="timer">01:00</div>
+    </div>
+    <div id="record" style="display:none;">
+        <h2>Record Mode</h2>
+        <button onclick="startRecording()" id="recBtn">Start Recording</button>
+        <button onclick="stopRecording()" id="stopBtn" style="display:none;">Stop Recording</button>
+        <div style="margin:20px 0;">
+            <video id="video" width="400" height="300" style="background:#222;" autoplay muted></video>
+        </div>
+        <form id="uploadForm" method="post" enctype="multipart/form-data" action="/upload" style="display:none;">
+            <input type="file" id="videoFile" name="video" style="display:none;">
+            <button type="submit">Upload Recording</button>
+        </form>
+        <a id="downloadLink" style="display:none;">Download Recording</a>
+    </div>
+    <script>
+        // Mode switching
+        function showMode(mode) {
+            document.getElementById('countdown').style.display = mode === 'countdown' ? 'block' : 'none';
+            document.getElementById('record').style.display = mode === 'record' ? 'block' : 'none';
+        }
+        // Countdown logic
+        let timer, minutes = 1, seconds = 0, isRunning = false;
+        function startTimer() {
+            minutes = parseInt(document.getElementById('inputMinutes').value) || 1;
+            seconds = 0;
+            isRunning = true;
+... (truncated for brevity)
