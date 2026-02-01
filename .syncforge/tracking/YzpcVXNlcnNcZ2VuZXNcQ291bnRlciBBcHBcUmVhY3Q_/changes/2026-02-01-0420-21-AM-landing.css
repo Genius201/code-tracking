@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+  min-height: 100vh;
+}
+
+
+.container {
+  max-width: 500px;
+  margin: 80px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 48px 32px 40px 32px;
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 18px auto;
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(108,46,183,0.10));
+}
+
+
+h1 {
+  color: #6C2EB7;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+
+.subtitle {
+  color: #F75C8C;
+  margin-bottom: 32px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+
+.cta-btn {
+  display: inline-block;
+  background: #6C2EB7;
+... (truncated for brevity)
