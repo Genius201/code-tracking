@@ -1,0 +1,51 @@
+:root{
+  --lime:#B6FF2E;
+  --black:#0B0B0F;
+  --black2:#050508;
+  --white:#FFFFFF;
+  --muted: rgba(255,255,255,.72);
+  --muted2: rgba(255,255,255,.55);
+  --card: rgba(255,255,255,.05);
+  --border: rgba(255,255,255,.12);
+  --shadow: 0 14px 60px rgba(0,0,0,.55);
+  --radius: 18px;
+  --radius2: 28px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background:
+    radial-gradient(900px 520px at 50% 28%, rgba(182,255,46,.22), transparent 60%),
+    linear-gradient(180deg, var(--black) 0%, var(--black2) 100%);
+  color:var(--white);
+}
+
+/* Layout */
+.shell{
+  width:min(1120px, 92vw);
+  margin:0 auto;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+header.topbar{
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  user-select:none;
+}
+.dot{
+  width:10px;height:10px;border-radius:999px;background:var(--lime);
+... (truncated for brevity)
