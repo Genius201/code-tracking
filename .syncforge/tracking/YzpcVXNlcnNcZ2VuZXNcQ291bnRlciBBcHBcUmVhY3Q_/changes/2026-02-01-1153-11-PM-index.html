@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Com/piche! — Stand-up Comedian’s Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Auth Modal -->
+  <div id="authModal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Authentication">
+    <div class="modalCard">
+      <div class="modalHead">
+        <div class="brandMini">
+          <span class="dot"></span><span>Com/piche!</span>
+        </div>
+        <button class="iconBtn" id="authCloseBtn" aria-label="Close">✕</button>
+      </div>
+
+      <div class="modalBody">
+        <h2 id="authTitle">Welcome</h2>
+        <p class="muted">This is a prototype sign-in (no backend). Your name is saved locally.</p>
+
+        <label class="field">
+          <span>Display name</span>
+          <input id="authName" type="text" placeholder="Carl" autocomplete="name" />
+        </label>
+
+        <div class="row gap">
+          <button class="btn btnPrimary" id="authSignInBtn">Enter / Sign In</button>
+          <button class="btn btnGhost" id="authSignUpBtn">Sign Up</button>
+        </div>
+
+        <p class="fineprint muted">
+          Recording features require browser permissions. Video/audio recording works best over <strong>https</strong> or localhost.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
